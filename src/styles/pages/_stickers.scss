@@ -1,0 +1,14 @@
+.stickers {
+  list-style: none;
+
+  li {
+    margin-bottom: 50px;
+
+    img {
+      height: auto;
+      width: 100px;
+      filter: drop-shadow(0 0 10px rgba(0, 0,0,0.25))
+
+    }
+  }
+}

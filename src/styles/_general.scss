@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Norms","Segoe UI";
+}
+
+body {
+  background-color: #282C34 !important;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+@font-face {
+  font-family: "Norms";
+  src: url("../fonts/ttnorms-default-regular-webfont.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Norms";
+  src: url("../fonts/ttnorms-bold-webfont.woff") format("woff");
+  font-weight: bold;
+}
+
+main {
+  display: block;
+  // width: calc(100% - 20%);
+  // height: calc(100vh - 100px);
+  // flex-wrap: wrap;
+  padding: 100px 10% 0 calc(10% + 350px);
+}
