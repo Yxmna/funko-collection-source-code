@@ -1,0 +1,48 @@
+#graphs {
+
+  h1 {
+    display: none;
+  }
+
+  canvas {
+    border-radius: 10px;
+    --lightness-g: 24%;
+    --saturation-g: 75%;
+    --lightness-g2: 12%;
+    --saturation-g2: 50%;
+    --color-g: 198;
+    background: radial-gradient(
+      ellipse at center,
+      hsl(var(--color), var(--saturation-g), var(--lightness-g)),
+      hsl(var(--color), var(--saturation-g2), var(--lightness-g2))
+    );
+    padding: 40px 20px 30px 20px;
+    box-shadow: 0 0 50px -20px black;
+  }
+
+  .firstgraphs {
+    display: flex;
+    // min-height: 400px;
+    margin-top: 20px;
+
+    div:first-child {
+      width: 66%;
+      margin-right: 20px;
+    }
+    div:last-child {
+      // width: 33%;
+    }
+  }
+
+
+    .secondgraphs {
+      display: flex;
+      margin-top: 20px;
+      // min-height: 400px;
+
+      div:last-child {
+        width: 66%;
+        margin-left: 20px;
+      }
+    }
+}

@@ -1,37 +1,37 @@
 header {
-  // display: flex;
-  align-items: end;
-  background-color: black;
-  background-color: #21252b;
-  width: 350px;
-  position: fixed;
-  height: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
 
   h1 {
-    display: none;
+    font-size: 20px;
+    font-weight: 700;
   }
 
   ul {
-    // display: flex;
     list-style: none;
-    margin-top: 100px;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
 
     li {
-      margin: 30px;
+      margin: 0 5px;
     }
   }
 
   a {
+    font-size: 18px;
     padding: 15px 15px 10px;
     text-decoration: none;
     color: white;
     font-weight: 600;
-    text-transform: uppercase;
     border-radius: 10px 10px 0 0;
+
+    &:hover   {
+      text-decoration: underline;
+    }
   }
 
-  .selected {
-    background-color: #282C34;
+  .selected{
+    text-decoration: underline;
   }
 }

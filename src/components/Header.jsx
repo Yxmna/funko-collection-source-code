@@ -1,25 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header(props) {
-
-  const path = useLocation().pathname;
-
-  return(
-
+  return (
     <header>
       <h1>Funko Collection</h1>
 
       <ul>
-        <li><Link to="funko-collection/collection" className={path=="/collection"?"selected":""} >Collection</Link></li>
-        <li><Link to="funko-collection/graphique" className={path=="/graphique"?"selected":""} >Graphique</Link></li>
-        <li><Link to="funko-collection/tout" className={path=="/tout"?"selected":""} >Toutes nos pops</Link></li>
-        <li><a href="https://yxmna.github.io/funko-stickers" >Guide des stickers</a></li>
+        <li>
+          <NavLink
+            to="funko-collection/collections"
+            className={({isActive}) => (isActive ? "selected" : "")}
+          >
+            Collections
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="funko-collection/graphique"
+            className={({isActive}) => (isActive ? "selected" : "")}
+          >
+            Graphiques
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="funko-collection/tout"
+            className={({isActive}) => (isActive ? "selected" : "")}
+          >
+            Toutes nos pops
+          </NavLink>
+        </li>
+        <li>
+          <a href="https://yxmna.github.io/funko-stickers">
+            Liste des stickers
+          </a>
+        </li>
       </ul>
     </header>
-
-  )
-
+  );
 }
 
 export default Header;

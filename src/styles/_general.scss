@@ -4,15 +4,22 @@
   font-family: "Norms","Segoe UI";
 }
 
-body {
-  background-color: #282C34 !important;
-  overflow-x: hidden;
+:root {
+  --lightness: 45%;
+  --saturation: 82%;
+  --color: 198;
 }
 
 #root {
+  --lightness: 3%;
+  --saturation: 100%;
+  background-color: #282C34 !important;
+  background-color: #060814 !important;
+  // background-color: hsl(198,var(--saturation),var(--lightness)) !important;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
-  display: flex;
+  // background: radial-gradient(ellipse at center, #10516B8A, #070914)
 }
 @font-face {
   font-family: "Norms";
@@ -31,5 +38,96 @@ main {
   // width: calc(100% - 20%);
   // height: calc(100vh - 100px);
   // flex-wrap: wrap;
-  padding: 100px 10% 0 calc(10% + 350px);
+  // padding: 100px calc(15% - 169px) 100px calc(15% - 169px);
+  padding: 100px calc(5% + 100px);
+}
+
+.back {
+  max-width: 404px;
+  width: 100%;
+  > a {
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    // opacity: 0.25;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  header ul {
+    display: block !important;
+
+    li {
+      margin-top: 10px !important;
+    }
+  }
+
+  main {
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    > * {
+      display: block !important;
+      margin-left: 0 !important;
+      width:100% !important;
+      overflow: hidden;
+    }
+
+    article {
+      width: calc(100% - 80px) !important;
+
+      ul {
+        position: relative !important;
+        flex-wrap: nowrap !important;
+        margin-top: 30px;
+
+        img {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .pops, .pop_page {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .firstgraphs, .secondgraphs {
+      display: block !important;
+    }
+
+    .pop_page {
+      flex-direction: column;
+
+      > div {
+        min-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .stickers {
+        justify-content: center;
+      }
+    }
+
+    #graphs {
+      padding: 50px !important;
+
+      div {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+
+      canvas {
+        margin-top: 50px;
+      }
+    }
+  }
 }
